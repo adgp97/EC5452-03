@@ -23,8 +23,8 @@ class CreateCoursesTable extends Migration
             $table->double('discount_price',10,2);
             $table->double('actual_price',10,2);
             $table->string('playlist_url');
-            $table->integer('view_count');
-            $table->integer('subscriber_count');
+            $table->integer('view_count')->nullable();
+            $table->integer('subscriber_count')->nullable();
             $table->integer('status')->default(0); //live = 1, not live = 0
             $table->string('photo')->nullable();
             $table->softDeletes();           
